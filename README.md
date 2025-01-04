@@ -4,13 +4,21 @@ A simple environment. Contains only musl, dash, and sbase.
 
 I guess it's perfect to run (extremely basic) shell scripts or C programs.
 
+## Using
+
+We have a container image (`ghcr.io/charles8191/minimalrootfs`). If you'd like a rootfs, read [rootfs](#rootfs):
+
 ## Building
+
+### Container
 
 If you want a container, just build the Containerfile using podman:
 
 ```sh
 podman build -t minimalrootfs .
 ```
+
+### rootfs
 
 If you want a rootfs, you can just extract the container image, but if that's too easy for you, you can do it manually:
 
