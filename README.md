@@ -27,7 +27,7 @@ If you want a rootfs, you can just extract the container image, but if that's to
 2. Install the following packages:
 
 ```sh
-apk add alpine-sdk autoconf automake bash
+apk add alpine-sdk automake autoconf bash
 ```
 
 3. Run the `./build.sh` script:
