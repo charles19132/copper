@@ -4,10 +4,6 @@ A simple environment. Contains only musl, dash, and sbase.
 
 I guess it's perfect to run (extremely basic) shell scripts or C programs.
 
-## Using
-
-We have a container image (`ghcr.io/charles8191/minimalrootfs`). If you'd like a rootfs, read [rootfs](#rootfs):
-
 ## Building
 
 ### Container
