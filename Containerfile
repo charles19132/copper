@@ -1,4 +1,5 @@
 FROM alpine:edge AS builder
+ENV CFLAGS=-s CXXFLAGS=-s
 COPY . /work
 RUN apk add alpine-sdk automake autoconf bash && \
     cd /work && \
