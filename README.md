@@ -15,7 +15,7 @@ We have a container image ([`git.disroot.org/charles8191/minimalrootfs`](https:/
 If you want a container, just build the Containerfile using Docker or podman:
 
 ```sh
-docker build -t minimalrootfs .
+docker build -t minimalrootfs -f Containerfile .
 ```
 
 ### rootfs
