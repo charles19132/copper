@@ -12,10 +12,10 @@ We have a container image ([`git.disroot.org/charles8191/minimalrootfs`](https:/
 
 ### Container
 
-If you want a container, just build the Containerfile using Docker or podman:
+If you want a container, just build the Containerfile using podman:
 
 ```sh
-docker build -t minimalrootfs -f Containerfile .
+podman build -t minimalrootfs .
 ```
 
 ### rootfs
