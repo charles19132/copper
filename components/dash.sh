@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone --depth 1 git://git.kernel.org/pub/scm/utils/dash/dash.git
+git clone --depth 1 --single-branch --branch master git://git.kernel.org/pub/scm/utils/dash/dash.git
 cd dash
 ./autogen.sh
 ./configure

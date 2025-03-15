@@ -6,7 +6,7 @@ I guess it's perfect to run (extremely basic) shell scripts or C programs.
 
 ## Using
 
-We have a container image ([`git.disroot.org/charles8191/minimalrootfs`](https://git.disroot.org/charles8191/minimalrootfs/packages)). If you'd like a rootfs, read [rootfs](#rootfs):
+We have a container image (`ghcr.io/charles25565/minimalrootfs`). If you'd like a rootfs, read [rootfs](#rootfs):
 
 ## Building
 
