@@ -6,7 +6,7 @@ I guess it's perfect to run (extremely basic) shell scripts or C programs.
 
 ## Using
 
-We have a container image (`ghcr.io/charles25565/minimalrootfs`). If you'd like a rootfs, read [rootfs](#rootfs):
+Build the container image. If you'd like a rootfs, read [rootfs](#rootfs):
 
 ## Building
 
