@@ -30,10 +30,10 @@ If you want a rootfs, you can just extract the container image, but if that's to
 apk add alpine-sdk automake autoconf bash
 ```
 
-3. Run the `./build.sh` script:
+3. Run the `build.sh` script:
 
 ```sh
-./build.sh
+bash build.sh
 ```
 
 4. Pray it doesn't break your system, and you will have a rootfs folder that you can chroot into.
