@@ -1,12 +1,12 @@
 # minimalrootfs
 
-A simple environment. Contains only musl, dash, and sbase.
+A simple environment.
 
 Can be relatively easy to extend and make an entire userspace.
 
 ## Using
 
-Build the container image. If you'd like a rootfs, read [rootfs](#rootfs):
+Use a [pre-built container image](https://codeberg.org/charles25565/minimalrootfs/packages), or [build a container image](#building). Or you can build a [rootfs](#rootfs):
 
 ## Building
 
@@ -20,7 +20,7 @@ podman build -t minimalrootfs .
 
 ### rootfs
 
-If you want a rootfs, you can just extract the container image, but if that's too easy for you, you can do it manually:
+If you want a rootfs, you can just extract the container image, but you can do it manually:
 
 1. Make sure you have Alpine Linux on your host.
 
@@ -36,4 +36,4 @@ apk add alpine-sdk automake autoconf bash git
 bash build.sh
 ```
 
-4. Pray it doesn't break your system, and you will have a rootfs folder that you can chroot into.
+4. You should have a rootfs folder that you can chroot into.
