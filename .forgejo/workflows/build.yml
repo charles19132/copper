@@ -4,7 +4,7 @@ on:
             - main
     workflow_dispatch:
 jobs:
-    test:
+    build:
         runs-on: codeberg-tiny-lazy
         container:
             image: docker.io/library/debian:bookworm
