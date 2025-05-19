@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone --depth 1 --single-branch --branch master git://git.suckless.org/sbase
+git clone --depth=1 --single-branch --branch=master git://git.suckless.org/sbase
 cd sbase
 make -j$(nproc)
 cd ..

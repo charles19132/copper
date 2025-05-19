@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone --depth 1 --single-branch --branch master git://git.musl-libc.org/musl
+git clone --depth=1 --single-branch --branch=master git://git.musl-libc.org/musl
 cd musl
 ./configure
 make -j$(nproc)
