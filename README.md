@@ -2,7 +2,7 @@
 
 A simple environment.
 
-Can be relatively easy to extend and make an entire userspace.
+Relatively easy to extend and make an entire userspace.
 
 ## Using
 
