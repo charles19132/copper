@@ -9,4 +9,4 @@ jobs:
             image: ghcr.io/almalinux/almalinux:9
         steps:
             - name: Make request
-              run: curl -XPOST -s "${{secrets.WEBHOOK}}" > /dev/null
+              run: curl -XPOST -L -s "${{secrets.WEBHOOK}}" > /dev/null
