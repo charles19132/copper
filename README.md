@@ -6,7 +6,7 @@ Relatively easy to extend and make an entire userspace.
 
 ## Using
 
-Use a [pre-built container image](https://codeberg.org/charles25565/-/packages/container/minimalrootfs), or [build a container image](#building). Or you can build a [rootfs](#rootfs):
+Use a [pre-built container image](https://codeberg.org/charles25565/-/packages/container/minimalrootfs/latest), or [build a container image](#building). Or you can build a [rootfs](#rootfs):
 
 ## Building
 
