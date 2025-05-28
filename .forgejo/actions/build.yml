@@ -1,0 +1,21 @@
+on: 
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+jobs:
+    build:
+        runs-on: codeberg-tiny-lazy
+        container:
+            image: docker.io/library/debian:bookworm
+        steps:
+            - run: apt-get update
+            - run: apt-get install buildah ca-certificates curl -y
+            - run: echo ${{secrets.AUTHFILE}} | base64 -d > authfile
+            - run: curl -s https://codeberg.org/charles25565/minimalrootfs/archive/main.tar.gz | gzip -ckd | tar xf -
+            - uses: https://codeberg.org/charles25565/action-buildah@main
+              with:
+                tag: "codeberg.org/charles25565/minimalrootfs:latest"
+                context: "minimalrootfs"
+                push: true
+                authfile: "authfile"
