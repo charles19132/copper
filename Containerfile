@@ -1,5 +1,5 @@
 FROM alpine:edge AS builder
-RUN apk add alpine-sdk automake autoconf bash git
+RUN apk add build-base automake autoconf bash git
 COPY . /work
 RUN cd /work && \
     bash build.sh
