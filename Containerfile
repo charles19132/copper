@@ -4,6 +4,7 @@ COPY components /work/components
 COPY build.sh /work
 RUN cd /work && \
     bash build.sh
+
 FROM scratch
 COPY --from=builder /work/rootfs /
 CMD ["/bin/sh"]
