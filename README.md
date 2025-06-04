@@ -37,3 +37,19 @@ bash build.sh
 ```
 
 4. You should have a rootfs folder that you can chroot into.
+
+## SBOM
+
+There is an SBOM containing the commit for each component. It can be retrieved using the following methods.
+
+### Container
+
+```sh
+podman run quay.io/charles2/minimalrootfs:latest cat /.sbom
+```
+
+### rootfs
+
+```sh
+chroot rootfs /bin/cat /.sbom
+```
