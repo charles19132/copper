@@ -40,7 +40,7 @@ bash build.sh
 
 ## SBOM
 
-There is an SBOM containing the commit for each component. It can be retrieved using the following methods.
+There is a simple SBOM containing the commit for each component. It can be retrieved using the following methods.
 
 ### Container
 
