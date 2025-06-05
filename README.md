@@ -4,9 +4,9 @@ A simple environment.
 
 Relatively easy to extend and make an entire userspace.
 
-## Using
+## Pre-built
 
-Use a [pre-built container image](https://quay.io/repository/charles2/minimalrootfs), or [build a container image](#building). Or you can build a [rootfs](#rootfs):
+A [pre-built container image](https://quay.io/repository/charles2/minimalrootfs) is available.
 
 ## Building
 
@@ -22,21 +22,27 @@ buildah build -t minimalrootfs .
 
 If you want a rootfs, you can just extract the container image, but you can do it manually:
 
-1. Make sure you have Alpine Linux on your host.
+1. Install the following packages (or equivalent depending on your distribution):
 
-2. Install the following packages:
+- automake
+- autoconf
+- bash
+- build-base
+- git
 
-```sh
-apk add automake autoconf bash build-base git
-```
-
-3. Run the `build.sh` script:
+2. Run the `build.sh` script:
 
 ```sh
 bash build.sh
 ```
 
-4. You should have a rootfs folder that you can chroot into.
+> [!TIP]
+> You can build on a glibc system if you run this command instead:
+> ```sh
+> env CC=musl-gcc CXX=musl-gcc bash build.sh
+> ```
+
+3. You should have a rootfs folder that you can chroot into.
 
 ## SBOM
 
@@ -53,3 +59,5 @@ podman run quay.io/charles2/minimalrootfs:latest cat /.sbom
 ```sh
 chroot rootfs /bin/cat /.sbom
 ```
+
+It is in the format of `key=value`, where `key` is the component name and `value` is the commit.
