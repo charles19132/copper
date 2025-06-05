@@ -37,7 +37,7 @@ bash build.sh
 ```
 
 > [!TIP]
-> You can build on a glibc system if you run this command instead:
+> Although the previous command works on musl systems, you can build on a glibc system if you run this command instead:
 > ```sh
 > env CC=musl-gcc CXX=musl-gcc bash build.sh
 > ```
