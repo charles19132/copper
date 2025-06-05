@@ -1,9 +1,9 @@
-FROM alpine:edge AS builder
-RUN apk add automake autoconf bash build-base git
+FROM docker.io/library/debian:12-slim AS builder
+RUN apt-get clean && env DEBIAN_FRONTEND=noninteractive apt-get install automake autoconf bash build-essential git musl-tools
 COPY components /work/components
 COPY build.sh /work
 RUN cd /work && \
-    bash build.sh
+    env CC=musl-gcc CXX=musl-gcc bash build.sh
 
 FROM scratch
 COPY --from=builder /work/rootfs /
