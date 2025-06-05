@@ -27,8 +27,9 @@ If you want a rootfs, you can just extract the container image, but you can do i
 - automake
 - autoconf
 - bash
-- build-base
+- build-essential
 - git
+- musl-tools (usually only needed if building on a glibc system)
 
 2. Run the `build.sh` script:
 
