@@ -12,10 +12,10 @@ Use a [pre-built container image](https://quay.io/repository/charles2/minimalroo
 
 ### Container
 
-If you want a container, just build the Containerfile using podman:
+If you want a container, just build the Containerfile using buildah:
 
 ```sh
-podman build -t minimalrootfs .
+buildah build -t minimalrootfs .
 ```
 
 ### rootfs
