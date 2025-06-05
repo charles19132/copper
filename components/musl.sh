@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euxo pipefail
 git clone --depth=1 --single-branch --branch=master git://git.musl-libc.org/musl
 cd musl
 echo musl=$(git rev-parse HEAD) > .sbom-fragment

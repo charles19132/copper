@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euxo pipefail
 git clone --depth=1 --single-branch --branch=master git://git.kernel.org/pub/scm/utils/dash/dash.git
 cd dash
 echo dash=$(git rev-parse HEAD) > .sbom-fragment
