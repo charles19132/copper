@@ -1,5 +1,5 @@
-FROM docker.io/library/debian:12-slim AS builder
-RUN apt-get clean && apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install automake autoconf bash build-essential git musl-tools -y
+FROM quay.io/fedora/fedora:42 AS builder
+RUN dnf install autoconf automake awk bash binutils gcc git make musl-gcc -y
 COPY components /work/components
 COPY build.sh /work
 RUN cd /work && \

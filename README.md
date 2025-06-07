@@ -24,12 +24,15 @@ If you want a rootfs, you can just extract the container image, but you can do i
 
 1. Install the following packages (or equivalent depending on your distribution):
 
-- automake
 - autoconf
+- automake
+- awk
 - bash
-- build-essential
+- binutils
+- gcc
 - git
-- musl-tools (usually only needed if building on a glibc system)
+- make
+- musl-gcc (only needed if building on a glibc system)
 
 2. Run the `build.sh` script:
 
