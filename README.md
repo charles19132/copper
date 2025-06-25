@@ -12,10 +12,10 @@ A [pre-built container image](https://github.com/charles25565/minimalrootfs/pkgs
 
 ### Container
 
-If you want a container, just build the Containerfile using buildah:
+If you want a container, just build the Containerfile using podman:
 
 ```sh
-buildah build -t minimalrootfs .
+podman build -t minimalrootfs .
 ```
 
 ### rootfs
