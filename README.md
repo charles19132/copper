@@ -1,6 +1,6 @@
 # Copper
 
-Copper is a very simple Linux userspace that can be adapted.
+Copper is a very simple Linux userspace that can be very easily adapted.
 
 ## Pre-built
 
@@ -61,7 +61,7 @@ prepare() {
 }
 
 build() {
-  # Build steps. No need to change the directory to source.tmp.
+  # Build steps. No need to change the directory to source.tmp for this step.
 }
 
 copy() {
