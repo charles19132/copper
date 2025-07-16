@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
 
-FLAGS="-s -Os -ffunction-sections -fdata-sections -Wl,--gc-sections"
+FLAGS=""
 export CFLAGS=$FLAGS
 export CXXFLAGS=$FLAGS
 
