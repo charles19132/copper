@@ -1,12 +1,10 @@
-# minimalrootfs
+# Copper
 
-A simple environment.
-
-Relatively easy to extend and make an entire userspace.
+Copper is a very simple Linux userspace that can be adapted.
 
 ## Pre-built
 
-A [pre-built container image](https://quay.io/repository/charles2/minimalrootfs) is available.
+A [pre-built container image](https://quay.io/repository/charles2/copper) is available.
 
 ## Building
 
@@ -15,7 +13,7 @@ A [pre-built container image](https://quay.io/repository/charles2/minimalrootfs)
 If you want a container, just build the Containerfile using podman:
 
 ```sh
-podman build -t minimalrootfs .
+podman build -t copper .
 ```
 
 ### rootfs
