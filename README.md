@@ -50,7 +50,7 @@ bash build.sh
 
 1. Create a file in `components`, ending with `.sh`.
 
-2. Then edit this content to match your needs.
+2. Then edit this script to match your needs.
 
 > [!TIP]
 > You can also use the existing components as reference.
