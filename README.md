@@ -10,7 +10,7 @@ A [pre-built container image](https://quay.io/repository/charles2/copper) is ava
 
 ### Container
 
-If you want a container, just build the Containerfile using podman:
+If you want a container, simply build the Containerfile using podman:
 
 ```sh
 podman build -t copper .
@@ -18,9 +18,9 @@ podman build -t copper .
 
 ### rootfs
 
-If you want a rootfs, you can just extract the container image, but you can do it manually:
+If you want a rootfs, you can extract the container image, but you can also do it manually:
 
-1. Install the following packages (or equivalent depending on your distribution):
+1. Install the following packages (or equivalent depending on your distribution). You may need more if you add more components.
 
 - autoconf
 - automake
@@ -44,4 +44,31 @@ bash build.sh
 > env CC=musl-gcc CXX=musl-gcc bash build.sh
 > ```
 
-3. You should have a rootfs folder that you can chroot into.
+3. You should have a rootfs folder that you can deploy or use with chroot.
+
+## Adding a component
+
+1. Create a file in `components`, ending with `.sh`.
+
+2. Then edit this content to match your needs. You can also use the existing components as reference.
+
+```bash
+#!/bin/bash
+set -euxo pipefail
+
+prepare() {
+  # Put the source code in source.tmp.
+}
+
+build() {
+  # Build steps. No need to change the directory to source.tmp.
+}
+
+copy() {
+  # Copy the file(s) from source.tmp to rootfs.
+}
+```
+
+3. Save the file.
+
+4. If needed, you can edit the `mkdir -p` line in `build.sh` to create the directories needed for your component (for example, `/etc`).
