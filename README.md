@@ -75,3 +75,7 @@ copy() {
 3. Save the file.
 
 4. If needed, you can edit the `mkdir -p` line in `build.sh` to create the directories needed for your component (for example, `/etc`).
+
+## Changing compiler flags
+
+You can edit the `build.sh` script and add your own flags if needed.
