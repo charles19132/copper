@@ -4,7 +4,7 @@ Copper is a very simple Linux userspace that can be very easily adapted.
 
 ## Pre-built
 
-A [pre-built container image](https://quay.io/repository/charles2/copper) is available.
+A [pre-built container image](https://github.com/charles19132/copper/pkgs/container/copper) is available.
 
 ## Building
 
