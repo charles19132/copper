@@ -78,4 +78,4 @@ copy() {
 
 ## Changing compiler flags
 
-You can edit the `build.sh` script and add your own flags if needed.
+You can specify custom compiler flags using the `FLAGS` environment variable.

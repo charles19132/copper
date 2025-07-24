@@ -2,7 +2,10 @@
 set -euxo pipefail
 
 prepare() {
-  git clone --depth=1 --single-branch --branch=master git://git.musl-libc.org/musl source.tmp
+  git clone git://git.musl-libc.org/musl source.tmp
+  cd source.tmp
+  git checkout v1.2.5
+  cd ..
 }
 
 build() {

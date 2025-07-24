@@ -2,7 +2,10 @@
 set -euxo pipefail
 
 prepare() {
-  git clone --depth=1 --single-branch --branch=master git://git.kernel.org/pub/scm/utils/dash/dash.git source.tmp
+  git clone git://git.kernel.org/pub/scm/utils/dash/dash.git source.tmp
+  cd source.tmp
+  git checkout v0.5.12
+  cd ..
 }
 
 build() {

@@ -2,7 +2,10 @@
 set -euxo pipefail
 
 prepare() {
-  git clone --depth=1 --single-branch --branch=master git://git.suckless.org/sbase source.tmp
+  git clone git://git.suckless.org/sbase source.tmp
+  cd source.tmp
+  git checkout 0.1
+  cd ..
 }
 
 build() {
