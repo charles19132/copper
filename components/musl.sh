@@ -14,5 +14,6 @@ build() {
 }
 
 copy() {
+  test -d rootfs/lib || mkdir -p rootfs/lib
   cp source.tmp/lib/libc.so rootfs/lib/ld-musl-$(uname -m).so.1
 }

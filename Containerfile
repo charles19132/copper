@@ -1,6 +1,6 @@
-FROM quay.io/fedora/fedora:42 AS builder
+FROM ghcr.io/archlinux/archlinux:latest AS builder
 
-RUN dnf install autoconf automake awk bash binutils gcc git make musl-gcc -y
+RUN pacman -Sy --noconfirm autoconf automake bash binutils gawk gcc git make musl
 
 COPY components /work/components
 COPY build-component.sh /work

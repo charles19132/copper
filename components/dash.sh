@@ -15,6 +15,7 @@ build() {
 }
 
 copy() {
+  test -d rootfs/bin || mkdir -p rootfs/bin
   cp source.tmp/src/dash rootfs/bin/dash
   ln -sf /bin/dash rootfs/bin/sh
 }

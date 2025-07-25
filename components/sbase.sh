@@ -13,5 +13,6 @@ build() {
 }
 
 copy() {
+  test -d rootfs/bin || mkdir -p rootfs/bin
   find source.tmp -maxdepth 1 -type f -executable -exec cp {} rootfs/bin \;
 }

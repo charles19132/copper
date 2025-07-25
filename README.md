@@ -24,13 +24,13 @@ If you want a rootfs, you can extract the container image, but you can also do i
 
 - autoconf
 - automake
-- awk
 - bash
 - binutils
+- gawk
 - gcc
 - git
 - make
-- musl-gcc (only needed if building on a glibc system)
+- musl (for musl-gcc, only needed if building on a glibc system)
 
 2. Run the `build.sh` script:
 
@@ -68,14 +68,18 @@ build() {
 }
 
 copy() {
+  # Make sure to make the folders needed if they don't exist.
+  # For example, for /bin:
+  # test -d rootfs/bin || mkdir -p rootfs/bin
+
   # Copy the file(s) from source.tmp to rootfs.
 }
 ```
 
 3. Save the file.
 
-4. If needed, you can edit the `mkdir -p` line in `build.sh` to create the directories needed for your component (for example, `/etc`).
-
 ## Changing compiler flags
 
 You can specify custom compiler flags using the `FLAGS` environment variable.
+
+For linker flags, you should use the standard `LDFLAGS` variable.
