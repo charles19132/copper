@@ -28,7 +28,7 @@ If you want a rootfs, you can extract the container image, but you can also do i
 - binutils
 - clang
 - gawk
-- git
+- git-core
 - make
 - musl-clang
 
