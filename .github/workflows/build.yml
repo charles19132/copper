@@ -13,15 +13,15 @@ jobs:
         runner:
           - ubuntu-24.04
           - ubuntu-24.04-arm
-    runs-on: ${{matrix.runner}}
+    runs-on: "${{matrix.runner}}"
     steps:
       - uses: actions/checkout@v4
-      - run: podman build -t copper .
-      - run: podman save copper --format oci-archive -o copper-${{matrix.runner}}.ociarchive
+      - run: podman build --no-cache -t copper .
+      - run: podman save copper --format oci-archive -o "copper-${{matrix.runner}}.ociarchive"
       - uses: actions/upload-artifact@v4
         with:
-          name: copper-${{matrix.runner}}
-          path: copper-${{matrix.runner}}.ociarchive
+          name: "copper-${{matrix.runner}}"
+          path: "copper-${{matrix.runner}}.ociarchive"
   push:
     runs-on: ubuntu-24.04
     permissions:
@@ -38,5 +38,5 @@ jobs:
       - run: podman manifest create copper
       - run: podman manifest add copper oci-archive:copper-ubuntu-24.04.ociarchive
       - run: podman manifest add copper oci-archive:copper-ubuntu-24.04-arm.ociarchive
-      - run: podman manifest push copper docker://ghcr.io/charles19132/copper:latest
+      - run: podman manifest push copper "docker://ghcr.io/charles19132/copper:latest"
       
