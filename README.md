@@ -26,22 +26,22 @@ If you want a rootfs, you can extract the container image, but you can also do i
 - automake
 - bash
 - binutils
+- clang
 - gawk
-- gcc
 - git
 - make
-- musl (for musl-gcc, only needed if building on a glibc system)
+- musl (for musl-clang, only needed if building on a glibc system)
 
 2. Run the `build.sh` script:
 
 ```sh
-bash build.sh
+env CC=clang CXX=clang bash build.sh
 ```
 
 > [!TIP]
 > Although the previous command works on musl systems, you can build on a glibc system if you run this command instead:
 > ```sh
-> env CC=musl-gcc CXX=musl-gcc bash build.sh
+> env CC=musl-clang CXX=musl-clang bash build.sh
 > ```
 
 3. You should have a rootfs folder that you can deploy or use with chroot.

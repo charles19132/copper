@@ -1,13 +1,13 @@
 FROM ghcr.io/archlinux/archlinux:latest AS builder
 
-RUN pacman -Sy --noconfirm autoconf automake bash binutils gawk gcc git make musl
+RUN pacman -Sy --noconfirm autoconf automake bash binutils clang gawk git make musl
 
 COPY components /work/components
 COPY build-component.sh /work
 COPY build.sh /work
 
 RUN cd /work && \
-    env CC=musl-gcc CXX=musl-gcc bash build.sh
+    env CC=musl-clang CXX=musl-clang bash build.sh
 
 FROM scratch
 
