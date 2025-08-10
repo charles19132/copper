@@ -1,6 +1,6 @@
-FROM ghcr.io/archlinux/archlinux:latest AS builder
+FROM quay.io/fedora/fedora:rawhide AS builder
 
-RUN pacman -Sy --noconfirm autoconf automake bash binutils clang gawk git make musl
+RUN dnf install -y autoconf automake bash binutils clang gawk git make musl-clang
 
 COPY components /work/components
 COPY build-component.sh /work

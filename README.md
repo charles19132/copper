@@ -30,7 +30,7 @@ If you want a rootfs, you can extract the container image, but you can also do i
 - gawk
 - git
 - make
-- musl (for musl-clang, only needed if building on a glibc system)
+- musl-clang
 
 2. Run the `build.sh` script:
 
