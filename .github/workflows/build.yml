@@ -23,9 +23,10 @@ jobs:
           name: copper-${{matrix.runner}}
           path: copper-${{matrix.runner}}.ociarchive
   push:
+    runs-on: ubuntu-24.04
     permissions:
       packages: write
-    runs-on: ubuntu-24.04
+    needs: build
     steps:
       - run: echo "${{secrets.GITHUB_TOKEN}}" | podman login -u "${{github.actor}}" --password-stdin ghcr.io
       - uses: actions/download-artifact@v4
