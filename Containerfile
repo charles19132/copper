@@ -14,4 +14,3 @@ FROM scratch
 COPY --from=builder /work/rootfs /
 
 CMD ["/bin/sh"]
-LABEL org.opencontainers.image.description "This image is a build of the Copper project."
