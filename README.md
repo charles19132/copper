@@ -2,6 +2,9 @@
 
 Copper is a very simple Linux userspace that can be very easily adapted.
 
+> [!IMPORTANT]
+> Copper is only the userspace. To make a full device image, you will need to supply your own kernel (and a bootloader if needed).
+
 ## Pre-built
 
 A [pre-built container image](https://github.com/charles19132/copper/pkgs/container/copper) is available.
