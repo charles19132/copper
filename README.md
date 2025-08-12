@@ -95,6 +95,8 @@ You can build a component seperately by following this command:
 bash build-component.sh "components/<COMPONENT>.sh"
 ```
 
-Make sure to change `<COMPONENT>` to the actual name of the component.
+> [!IMPORTANT]
+> Make sure to change `<COMPONENT>` to the actual name of the component.
 
-Note that unlike `build-all.sh`, `build-component.sh` does not delete the `rootfs` folder automatically when starting.
+> [!NOTE]
+> Unlike `build-all.sh`, `build-component.sh` does not delete the `rootfs` folder automatically when starting.
