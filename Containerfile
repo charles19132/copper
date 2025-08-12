@@ -4,10 +4,10 @@ RUN dnf install -y autoconf automake bash binutils clang gawk git-core make musl
 
 COPY components /work/components
 COPY build-component.sh /work
-COPY build.sh /work
+COPY build-all.sh /work
 
 RUN cd /work && \
-    env CC=musl-clang CXX=musl-clang bash build.sh
+    env CC=musl-clang CXX=musl-clang bash build-all.sh
 
 FROM scratch
 

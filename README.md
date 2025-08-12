@@ -35,16 +35,16 @@ If you want a rootfs, you can extract the container image, but you can also do i
 - make
 - musl-clang
 
-2. Run the `build.sh` script:
+2. Run the `build-all.sh` script:
 
 ```sh
-env CC=clang CXX=clang bash build.sh
+env CC=clang CXX=clang bash build-all.sh
 ```
 
 > [!TIP]
 > Although the previous command works on musl systems, you can build on a glibc system if you run this command instead:
 > ```sh
-> env CC=musl-clang CXX=musl-clang bash build.sh
+> env CC=musl-clang CXX=musl-clang bash build-all.sh
 > ```
 
 3. You should have a rootfs folder that you can deploy or use with chroot.
@@ -83,6 +83,18 @@ copy() {
 
 ## Changing compiler flags
 
-You can specify custom compiler flags using the `FLAGS` environment variable.
+You can specify custom C or C++ compiler flags using the `CFLAGS` and `CXXFLAGS` environment variables respectively.
 
-For linker flags, you should use the standard `LDFLAGS` variable.
+For linker flags, you should use the `LDFLAGS` environment variable.
+
+## Building a single component
+
+You can build a component seperately by following this command:
+
+```sh
+bash build-component.sh "components/<COMPONENT>.sh"
+```
+
+Make sure to change `<COMPONENT>` to the actual name of the component.
+
+Note that unlike `build-all.sh`, `build-component.sh` does not delete the `rootfs` folder automatically when starting.
